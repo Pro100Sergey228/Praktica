@@ -1,0 +1,524 @@
+f* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 3900px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(image/фон.png);
+    height: 1024px;
+}
+
+.container {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.head-up {
+    justify-content: space-between;
+    display: flex;
+}
+
+.hu-left {
+    padding-top: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.shapka {
+    padding-top: 10px;
+    display: flex;
+}
+
+.shapkapr {
+    padding-top: 10px;
+}
+
+.logo {
+    height: 150px;
+    width: 150px;
+}
+
+.logo-text {
+    margin-left: 10px;
+    font-size: 36px;
+    color: white;
+}
+
+.nav-item {
+    padding-left: 5px;
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    color: black;
+}
+
+.logo-text p:last-child {
+    font-weight: 700;
+}
+
+.knopka1 {
+    margin-right: 1px;
+    font-size: 18px;
+    border-radius: 10px;
+    height: 30px;
+    color: white;
+}
+
+.knopka1:hover {
+    filter: drop-shadow(100px 50px 100px #000d);
+}
+
+.head-bottom {
+    justify-content: space-between;
+    align-items: center;
+    height: 700px;
+    display: flex;
+    
+}
+
+.head-text {
+    color: white;
+    width: 600px;
+}
+
+.head-text p:first-child {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.head-text p:nth-child(2) {
+    font-style: oblique;
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: 28px;
+}
+
+.head-text p:nth-child(3) {
+    font-style: oblique;
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: 28px;
+}
+
+video {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.knopki {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.knopka2 {
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border-color: black;
+    font-weight: 700;
+    border-style: solid;
+    margin: 5px;
+}
+
+.knopka3 {
+    font-weight: 700;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    border-style: solid;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border-color: white;
+    margin: 5px;
+}
+
+.knopka2:hover {
+    filter: drop-shadow(10px 5px 10px #000d);
+}
+
+.knopka3:hover {
+    filter: drop-shadow(10px 5px 10px #000d);
+}
+
+.service-text {
+    text-align: center;
+}
+
+main {
+    margin-top: 30px;
+}
+
+.service-text p:first-child {
+    color: aqua;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.service-text p:last-child {
+    color: grey;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.service-description {
+    text-align: center;
+}
+
+.service-users {
+    margin-bottom: 75px;
+    margin-top: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.people {
+    height: 225px;
+}
+
+.service-item {
+    width: 300px;
+    flex-wrap: wrap;
+}
+
+.desc-text {
+    text-align: center;
+}
+
+.desc-text p:first-child {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.desc-text p:last-child {
+    color: gray;
+}
+.all{
+    background-image: url(image/фон2.jpg);
+    width: 100%;
+    position: relative;
+}
+
+#slider { /*положение слайдера*/
+    position: relative;
+	text-align: center;
+    top: 10px;
+}
+
+#slider{ /*центровка слайдера*/
+	margin-left: 25%;
+}
+
+#slides article{ /*все изображения справа друг от доруга*/
+	width: 20%;
+	float: left;
+}
+
+#slides .image{ /*устанавливает общий размер блока с изображениями*/
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+	width: 100%;
+}
+
+#desktop:checked ~ #slider{ /*размер всего слайдера*/
+	max-width: 900px; /*максимальнная длинна*/
+}
+
+/*настройка переключения и положения для левой стрелки*/
+/*если свич1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+#switch1:checked ~ #controls label:nth-child(5), 
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3),
+#switch5:checked ~ #controls label:nth-child(4){
+	background: url('prev.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: left;
+	margin: 0 0 0 -84px; /*сдвиг влево*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+/*настройка переключения и положения для правой стрелки*/
+#switch1:checked ~ #controls label:nth-child(2), 
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch4:checked ~ #controls label:nth-child(5),
+#switch5:checked ~ #controls label:nth-child(1){
+	background: url('next.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: right;
+	margin: 0 -84px 0 0; /*сдвиг вправо*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
+	cursor: pointer;
+}
+
+.all input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+	display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+	margin-left: -400%;
+}
+
+#controls{ /*положение блока всех управляющих элементов*/
+	margin: -25% 0 0 0;
+	width: 100%;
+	height: 50px;
+}
+
+#active label{ /*стиль отдельного переключателя*/
+	border-radius: 10px; /*скругление углов*/
+	display: inline-block; /*расположение в строку*/
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+}
+
+#active{ /*расположение блока с переключателями*/
+	margin: 20% 0 0;
+	text-align: center;
+}
+
+#active label:hover{ /*поведение чекбокса при наведении*/
+	background: red;
+	border-color: #777 !important; /*выполнение в любом случае*/
+}
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4),
+#switch5:checked ~ #active label:nth-child(5){
+	background: #18a3dd;
+	border-color: #18a3dd !important;
+}
+
+#slides .image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover{ /*прозрачность стрелок при наведении*/
+	opacity: 0.6;
+}
+
+#controls label{ /*прозрачность стрелок при отводе курсора*/
+	transition: opacity 0.2s ease-out;
+}
+.wdicf-text-bottom-done {
+    display: flex;
+    align-items: center;
+}
+.carta{
+    position: relative;
+
+}
+
+.contact {
+    margin-top: 100px;
+}
+
+.contact-text {
+    text-align: center;
+}
+
+.contact-text p:first-child {
+    color: aqua;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.contact-text p:last-child {
+    color: grey;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contact-main {
+    margin-top: 50px;
+    display: flex;
+}
+
+.contact-text-main {
+    width: 50%;
+}
+.contact-text-main-head{
+    font-size: 35px;
+}
+
+
+.name-lastname input {
+    padding: 0 15px;
+    height: 40px;
+    margin: 0 15px;
+    font-size: 16px;
+    width: 250px;
+}
+
+.phone-email input {
+    padding: 0 15px;
+    width: 250px;
+    height: 40px;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.smth {
+    width: 530px;
+    height: 150px;
+    margin: 0 15px;
+    padding: 15px 15px;
+    font-size: 16px;
+    resize: none;
+}
+
+.check {
+    display: flex;
+    padding-left: 50px;
+    text-align: left;
+    align-items: center;
+    font-size: 13px;
+}
+
+.checkbox {
+    height: 15px;
+    width: 15px;
+}
+
+.check label {
+    color: grey;
+    margin-left: 10px;
+}
+
+.contact-text-main-inner {
+    color: grey;
+    font-size: 20px;
+    margin-right: 25%;
+}
+.contact-form-head{
+    margin-left: 25%;
+    margin-bottom: 5%;
+    font-size: 30px;
+}
+table{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: 5%;
+}
+th, td:first-child {
+    background: #AFCDE7;
+    color: white;
+    padding: 10px 20px;
+}
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+td {
+    background: #D8E6F3;
+}
+th:first-child, td:first-child {
+    text-align: left;
+}
+
+.knopka4 {
+    background-color: rgba(55, 0, 255, 0.658);
+    color: white;
+    font-size: 16px;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border-color: rgba(55, 0, 255, 0.658);
+    font-weight: 700;
+    margin: 5px;
+}
+
+.knopka4:hover {
+    filter: drop-shadow(10px 5px 10px #000d);
+}
+
+.footer {
+    height: 200px;
+    margin-top: 100px;
+    background-color: #6495ED;
+}
+
+.footer_inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    
+    padding-bottom: 60px;
+    align-items: center;
+    display: flex;
+}
+
+.footer_social {
+    padding-top: 70px;
+    text-align: end;
+}
+
+.footer_social img {
+    width: 35px;
+    height: 35px;
+}
+
+.copy {
+    color: white;
+}
+
+.navig-footer {
+    padding-top: 20px;
+}
